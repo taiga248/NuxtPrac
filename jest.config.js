@@ -15,4 +15,6 @@ module.exports = {
     '<rootDir>/components/**/*.vue',
     '<rootDir>/pages/**/*.vue',
   ],
+  // Vuetifyの要素をパースできるように
+  setupFiles: ['./test/unit/setup.js'],
 }
