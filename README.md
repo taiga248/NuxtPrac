@@ -1,6 +1,6 @@
 # NuxtPrac
 
-Nuxt x Vuetify x TypeScript x CompositionAPI x テストツール(現状jest) の調査
+Nuxt x Vuetify x TypeScript x CompositionAPI x jest
 
 ## Build Setup
 
