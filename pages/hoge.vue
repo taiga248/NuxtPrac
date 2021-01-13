@@ -1,6 +1,6 @@
 <template>
   <v-row justify="center" align="center">
-    <v-col>
+    <v-col cols="12">
       <h2>Hoge</h2>
     </v-col>
     <v-col cols="12">
@@ -10,7 +10,7 @@
     </v-col>
     <v-col cols="12">
       <v-card class="pa-3">
-        <Welcome />
+        <Input />
       </v-card>
     </v-col>
   </v-row>
@@ -18,11 +18,11 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import Welcome from '@/components/Welcome.vue'
+import Input from '@/components/Input.vue'
 import Equal from '~/components/Equal.vue'
 export default Vue.extend({
   components: {
-    Welcome,
+    Input,
     Equal,
   },
 })

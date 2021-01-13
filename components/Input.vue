@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h2>Input test</h2>
     <div class="message">
       {{ message }}
     </div>
