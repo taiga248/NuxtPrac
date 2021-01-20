@@ -56,5 +56,33 @@ export default {
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {},
+  build: {
+    extend(config, ctx) {
+      if (['local', 'development', 'dev'].includes(process.env.NODE_ENV)) {
+        // 開発用設定
+        config.devtool = ctx.isClient ? 'eval-source-map' : 'inline-source-map'
+      }
+      // テスト用に付与しているカスタムデータ属性（data-testid）をbuild時に削除する
+      // @see https://mk-engineer.com/posts/vue-test-testid
+      const vueLoader = config.module.rules.find(
+        (rule) => rule.loader === 'vue-loader'
+      )
+      vueLoader.options.compilerOptions = {
+        modules: [
+          {
+            preTransformNode(astEl) {
+              const key = 'data-testid'
+              const { attrsMap, attrsList } = astEl
+              if (attrsMap[key]) {
+                delete attrsMap[key]
+                const index = attrsList.findIndex((x) => x.name === key)
+                attrsList.splice(index, 1)
+              }
+              return astEl
+            },
+          },
+        ],
+      }
+    },
+  },
 }
