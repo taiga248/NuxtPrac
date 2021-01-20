@@ -12,7 +12,7 @@ const factory = (values = {}) => {
 }
 
 describe('Parent', () => {
-  it('Parent.vueの存在確認', () => {
+  test('Parent.vueの存在確認', () => {
     const wrapper = factory()
     expect(wrapper.vm).toBeTruthy()
   })

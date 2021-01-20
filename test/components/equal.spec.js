@@ -12,11 +12,11 @@ const factory = (values = {}) => {
 }
 
 describe('Equal', () => {
-  it('Equal.vueの存在確認', () => {
+  test('Equal.vueの存在確認', () => {
     const wrapper = factory()
     expect(wrapper.vm).toBeTruthy()
   })
-  it('titleの文字数確認', () => {
+  test('title', () => {
     const title = 'Equal Title'
     const subTitle = 'Sub'
     const wrapper = factory({ title, subTitle })
