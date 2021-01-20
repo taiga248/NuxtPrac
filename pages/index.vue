@@ -6,15 +6,20 @@
     <v-col cols="12">
       <Parent />
     </v-col>
+    <v-col>
+      <Toggle />
+    </v-col>
   </v-row>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 import Parent from '@/components/Parent.vue'
+import Toggle from '@/components/Toggle.vue'
 export default Vue.extend({
   components: {
     Parent,
+    Toggle,
   },
 })
 </script>

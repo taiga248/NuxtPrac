@@ -18,12 +18,12 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import Equal from '@/components/Equal.vue'
 import Input from '@/components/Input.vue'
-import Equal from '~/components/Equal.vue'
 export default Vue.extend({
   components: {
-    Input,
     Equal,
+    Input,
   },
 })
 </script>

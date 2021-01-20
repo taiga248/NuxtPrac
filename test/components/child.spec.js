@@ -19,15 +19,15 @@ const propsFactory = (values = {}) => {
 }
 
 describe('Child', () => {
-  it('Child.vueの存在確認', () => {
+  test('Child.vueの存在確認', () => {
     const wrapper = factory()
     expect(wrapper.vm).toBeTruthy()
   })
-  it('ChildのProps確認', () => {
+  test('ChildのProps確認', () => {
     const childTitle = 'Child'
     const wrapper = propsFactory({
       title: childTitle,
     })
-    expect(wrapper.props().title).toEqual(childTitle)
+    expect(wrapper.props().title).toEqual('Child')
   })
 })
