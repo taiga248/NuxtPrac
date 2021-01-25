@@ -18,13 +18,16 @@
     <v-main>
       <v-container>
         <nuxt />
+        <Link />
       </v-container>
     </v-main>
   </v-app>
 </template>
 
 <script>
+import Link from '~/components/Link.vue'
 export default {
+  components: { Link },
   data() {
     return {
       items: [
@@ -37,6 +40,11 @@ export default {
           icon: 'mdi-chart-bubble',
           title: 'Hoge',
           to: '/hoge',
+        },
+        {
+          icon: 'mdi-api',
+          title: 'Compositions',
+          to: '/compositions',
         },
       ],
       title: 'NuxtPrac',

@@ -6,9 +6,8 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
 import Child from '@/components/Child.vue'
-export default Vue.extend({
+export default {
   components: {
     Child,
   },
@@ -17,5 +16,5 @@ export default Vue.extend({
       childTitle: 'Child',
     }
   },
-})
+}
 </script>
