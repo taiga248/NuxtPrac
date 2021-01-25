@@ -7,8 +7,7 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-export default Vue.extend({
+export default {
   props: {
     title: {
       type: String,
@@ -16,5 +15,5 @@ export default Vue.extend({
       default: '子コンポーネントタイトル',
     },
   },
-})
+}
 </script>

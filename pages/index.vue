@@ -13,13 +13,13 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
 import Parent from '@/components/Parent.vue'
 import Toggle from '@/components/Toggle.vue'
-export default Vue.extend({
+
+export default {
   components: {
     Parent,
     Toggle,
   },
-})
+}
 </script>

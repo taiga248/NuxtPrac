@@ -18,8 +18,7 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-export default Vue.extend({
+export default {
   data() {
     return {
       status: false,
@@ -34,7 +33,7 @@ export default Vue.extend({
       this.statusVuetify = !this.statusVuetify
     },
   },
-})
+}
 </script>
 
 <style scoped>

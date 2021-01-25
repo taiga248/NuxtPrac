@@ -7,13 +7,12 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-export default Vue.extend({
+export default {
   data() {
     return {
       title: 'Sapmle Title',
       subTitle: 'Sub',
     }
   },
-})
+}
 </script>
