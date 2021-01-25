@@ -16,9 +16,13 @@ describe('Link.vue', () => {
     const wrapper = factory()
     expect(wrapper.vm).toBeTruthy()
   })
-  test('nuxt-link を踏むと "/" に遷移', () => {
+  test('nuxt-link を踏むとそれぞれのページに遷移', () => {
     const wrapper = factory()
-    // コンポーネントを見つけるために `find` や `get` を使うのは非推奨 => findComponent
-    expect(wrapper.findComponent(RouterLinkStub).props().to).toBe('/')
+    const routes = ['/', 'hoge', 'compositions']
+    routes.forEach((route) => {
+      // コンポーネントを見つけるために `find` や `get` を使うのは非推奨 => findComponent
+      // TODO:
+      expect(wrapper.findComponent(RouterLinkStub).props().to).toBe(route)
+    })
   })
 })
