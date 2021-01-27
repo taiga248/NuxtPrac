@@ -3,7 +3,7 @@
     <v-layout wrap>
       <v-flex v-for="route in routes" :key="route.id" class="mx-auto" xs3>
         <nav>
-          <nuxt-link :to="'/' + route">
+          <nuxt-link :data-testid="route" :to="'/' + route">
             <v-btn primary> {{ route === '' ? 'index' : route }}へ </v-btn>
           </nuxt-link>
         </nav>
