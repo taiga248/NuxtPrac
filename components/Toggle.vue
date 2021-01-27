@@ -26,10 +26,10 @@ export default {
     }
   },
   methods: {
-    toggle() {
+    toggle(this: { status: boolean }): void {
       this.status = !this.status
     },
-    toggleVuetify() {
+    toggleVuetify(this: { statusVuetify: boolean }): void {
       this.statusVuetify = !this.statusVuetify
     },
   },

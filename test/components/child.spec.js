@@ -21,7 +21,7 @@ const propsFactory = (values = {}) => {
 describe('Child', () => {
   test('Child.vueの存在確認', () => {
     const wrapper = factory()
-    expect(wrapper.vm).toBeTruthy()
+    expect(wrapper.exists()).toBeTruthy()
   })
   test('ChildのProps確認', () => {
     const childTitle = 'Child'

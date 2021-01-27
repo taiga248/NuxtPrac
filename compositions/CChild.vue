@@ -13,17 +13,11 @@ export default {
       default: 'タイトル',
     },
   },
-  // TODO: propsを引数に指定していないとcontextを使用できない？
-  setup(props, context) {
+  setup(_: any, ctx: any) {
     const clickEvent = (): void => {
-      context.emit('countUp')
-    }
-    // 無理矢理propsの出番を用意してあげてる
-    const log = () => {
-      alert(props)
+      ctx.emit('countUp')
     }
     return {
-      log,
       clickEvent,
     }
   },

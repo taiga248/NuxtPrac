@@ -14,6 +14,6 @@ const factory = (values = {}) => {
 describe('Parent', () => {
   test('Parent.vueの存在確認', () => {
     const wrapper = factory()
-    expect(wrapper.vm).toBeTruthy()
+    expect(wrapper.exists()).toBeTruthy()
   })
 })
