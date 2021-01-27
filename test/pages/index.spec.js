@@ -1,9 +1,9 @@
-import { mount } from '@vue/test-utils'
+import { shallowMount } from '@vue/test-utils'
 import Index from '@/pages/Index.vue'
 
-describe('Index', () => {
+describe('index.vue', () => {
   test('Index.vueの存在確認', () => {
-    const wrapper = mount(Index)
-    expect(wrapper.vm).toBeTruthy()
+    const wrapper = shallowMount(Index)
+    expect(wrapper.exists()).toBeTruthy()
   })
 })

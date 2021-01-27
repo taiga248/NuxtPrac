@@ -14,7 +14,7 @@ const factory = (values = {}) => {
 describe('Equal', () => {
   test('Equal.vueの存在確認', () => {
     const wrapper = factory()
-    expect(wrapper.vm).toBeTruthy()
+    expect(wrapper.exists()).toBeTruthy()
   })
   test('title', () => {
     const title = 'Equal Title'
