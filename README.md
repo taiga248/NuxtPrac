@@ -4,6 +4,8 @@ Nuxt x Vuetify x TypeScript x CompositionAPI x jest
 
 [Test README](https://github.com/taiga248/NuxtPrac/tree/main/test)
 
+[Composition API README](https://github.com/taiga248/NuxtPrac/tree/main/compositions)
+
 ## Build Setup
 
 ```bash
