@@ -1,6 +1,6 @@
 import Vuetify from 'vuetify'
 import { createLocalVue, mount } from '@vue/test-utils'
-import Toggle from '@/components/Toggle.vue'
+import Toggle from '@/components/BasicJest/Toggle.vue'
 
 // class, idで要素を探すのではなく、data-testid属性でハンドリング
 const sel = (id) => `[data-testid="${id}"]`

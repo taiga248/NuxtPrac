@@ -13,8 +13,8 @@
 </template>
 
 <script lang="ts">
-import Parent from '@/components/Parent.vue'
-import Toggle from '@/components/Toggle.vue'
+import Parent from '@/components/BasicJest/Parent.vue'
+import Toggle from '@/components/BasicJest/Toggle.vue'
 
 export default {
   components: {

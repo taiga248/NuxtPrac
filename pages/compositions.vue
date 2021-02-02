@@ -4,14 +4,15 @@
       <h2>Composition API</h2>
     </v-col>
     <v-col cols="12">
-      <CParent />
+      <Composition />
     </v-col>
   </v-row>
 </template>
 
 <script lang="ts">
-import CParent from '@/compositions/CParent.vue'
+import Composition from '@/components/Compos.vue'
+
 export default {
-  components: { CParent },
+  components: { Composition },
 }
 </script>

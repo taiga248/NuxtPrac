@@ -1,5 +1,5 @@
 import { shallowMount } from '@vue/test-utils'
-import Input from '@/components/Input.vue'
+import Input from '@/components/BasicJest/Input.vue'
 
 const factory = (values = {}) => {
   return shallowMount(Input, {
@@ -12,10 +12,9 @@ const factory = (values = {}) => {
 }
 
 describe('Input', () => {
-  test('Input メッセージを描画する', () => {
+  test(`${Input.name}メッセージを描画する`, () => {
     const wrapper = factory()
     expect(wrapper.find('.message').text()).toEqual('ようこそ！！')
-    // expect(wrapper.find('.message').text()).toEqual('ようこそ！') // !が一つ少ない場合
   })
 
   test('nameが7未満のとき', () => {
