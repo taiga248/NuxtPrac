@@ -1,40 +1,56 @@
-import { mount, RouterLinkStub } from '@vue/test-utils'
-import Link from '@/components/Link.vue'
+// TODO 優先度低
 
-// class, idで要素を探すのではなく、data-testid属性でハンドリング
-const sel = (id) => `[data-testid="${id}"]`
+// import { mount, RouterLinkStub } from '@vue/test-utils'
+// import Component from '@/components/atoms/Link.vue'
+// const factory = (values = {}) => {
+//   return mount(Component, {
+//     data() {
+//       return {
+//         ...values,
+//       }
+//     },
+//   })
+// }
+// const propsFactory = (values = {}) => {
+//   return mount(Component, {
+//     propsData: {
+//       ...values,
+//     },
+//   })
+// }
+// describe(`${Component.name}.vueのテスト`, () => {
+//   test(`${Component.name}.vueの存在確認`, () => {
+//     const wrapper = factory()
+//     expect(wrapper.exists()).toBeTruthy()
+//   })
 
-const factory = (values = {}) => {
-  return mount(Link, {
-    data() {
-      return {
-        ...values,
-      }
-    },
-  })
-}
-
-describe('Link.vue', () => {
-  // TODO: リンクのボタンがクリックされたら$route.pathの値を見て遷移されているかチェック
-  test('Link.vueの存在確認', () => {
-    const wrapper = factory()
-    expect(wrapper.exists()).toBeTruthy()
-  })
-  // TODO: 一旦後回し
-  //   const routes = ['', 'hoge', 'compositions']
-  //   test('nuxt-link ルートページに遷移', () => {
-  //     const wrapper = factory()
-  //     wrapper.find(sel(routes[0])).trigger('click')
-  //     expect(wrapper.findComponent(RouterLinkStub).props().to()).toBe(routes[0])
-  //   })
-  //   test('nuxt-link hogeページに遷移', () => {
-  //     const wrapper = factory()
-  //     wrapper.find(sel(routes[1])).trigger('click')
-  //     expect(wrapper.findComponent(RouterLinkStub).props().to()).toBe(routes[1])
-  //   })
-  //   test('nuxt-link compositionsページに遷移', () => {
-  //     const wrapper = factory()
-  //     wrapper.find(sel(routes[2])).trigger('click')
-  //     expect(wrapper.findComponent(RouterLinkStub).props().to()).toBe(routes[2])
-  //   })
-})
+//   test('リンク先が "/"', () => {
+//     const wrapper = propsFactory({
+//       item: {
+//         to: '/',
+//       },
+//     })
+//     wrapper.setProps({ to: '/' })
+//     expect(wrapper.findComponent(RouterLinkStub).props().to).toBe('/')
+//   })
+//   test('リンク先が "/hoge"', () => {
+//     const wrapper = propsFactory({
+//       item: {
+//         to: '/hoge',
+//       },
+//     })
+//     wrapper.setProps({ to: '/hoge' })
+//     expect(wrapper.findComponent(RouterLinkStub).props().to).toBe('/hoge')
+//   })
+//   test('リンク先が "/compositions"', () => {
+//     const wrapper = propsFactory({
+//       item: {
+//         to: '/compositions',
+//       },
+//     })
+//     wrapper.setProps({ to: '/compositions' })
+//     expect(wrapper.findComponent(RouterLinkStub).props().to).toBe(
+//       '/compositions'
+//     )
+//   })
+// })

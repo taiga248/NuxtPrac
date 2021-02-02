@@ -1,5 +1,5 @@
 import { shallowMount } from '@vue/test-utils'
-import Equal from '@/components/Equal.vue'
+import Equal from '@/components/BasicJest/Equal.vue'
 
 const factory = (values = {}) => {
   return shallowMount(Equal, {

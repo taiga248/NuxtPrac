@@ -18,16 +18,16 @@
     <v-main>
       <v-container>
         <nuxt />
-        <Link />
+        <Nav :items="items" />
       </v-container>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import Link from '~/components/Link.vue'
+import Nav from '@/components/molecules/Nav.vue'
 export default {
-  components: { Link },
+  components: { Nav },
   data() {
     return {
       items: [
