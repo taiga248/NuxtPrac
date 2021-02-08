@@ -2,8 +2,8 @@
   <div>
     <h1 data-testid="count">{{ countValue }}</h1>
     <div>
-      <v-btn primary data-testid="plus" @click="increment">+</v-btn>
-      <v-btn primary data-testid="minus" @click="decrement">-</v-btn>
+      <v-btn class="primary" data-testid="plus" @click="increment">+</v-btn>
+      <v-btn class="primary" data-testid="minus" @click="decrement">-</v-btn>
     </div>
   </div>
 </template>

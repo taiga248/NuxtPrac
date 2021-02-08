@@ -1,6 +1,7 @@
 import VueCompositionApi from '@vue/composition-api'
 import { createLocalVue } from '@vue/test-utils'
 import { useCount } from '@/compositions/compos.ts'
+import Compos from '@/components/Compos.vue'
 
 const localVue = createLocalVue()
 localVue.use(VueCompositionApi)
@@ -23,6 +24,11 @@ describe('Compos.ts', () => {
     decrement()
     expect(countValue.value).toEqual(-1)
   })
-  // TODO: Vue内のテスト これやらないと網羅率100%にならない？？
-  // test('setup関数内の変数、返数', () => {})
+})
+
+// TODO:
+describe('composition api周り', () => {
+  test('setup関数呼び出し', () => {
+    expect(Compos.setup()).toBeTruthy()
+  })
 })

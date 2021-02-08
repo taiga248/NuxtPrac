@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts">
-import Child from '@/components/BasicJest/Child.vue'
+import Child from '@/components/jestDemo/Child.vue'
 export default {
   components: {
     Child,

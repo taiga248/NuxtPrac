@@ -17,8 +17,8 @@
 </template>
 
 <script lang="ts">
-import Equal from '@/components/BasicJest/Equal.vue'
-import Input from '@/components/BasicJest/Input.vue'
+import Equal from '@/components/jestDemo/Equal.vue'
+import Input from '@/components/jestDemo/Input.vue'
 
 export default {
   components: {
