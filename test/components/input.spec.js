@@ -1,5 +1,5 @@
 import { shallowMount } from '@vue/test-utils'
-import Input from '@/components/BasicJest/Input.vue'
+import Input from '@/components/jestDemo/Input.vue'
 
 const factory = (values = {}) => {
   return shallowMount(Input, {

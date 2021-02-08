@@ -1,5 +1,5 @@
 import { shallowMount } from '@vue/test-utils'
-import Parent from '@/components/BasicJest/Parent.vue'
+import Parent from '@/components/jestDemo/Parent.vue'
 
 const factory = (values = {}) => {
   return shallowMount(Parent, {
