@@ -1,10 +1,9 @@
-import VueCompositionApi from '@vue/composition-api'
+import VueCompositionAPI from '@vue/composition-api'
 import { createLocalVue } from '@vue/test-utils'
 import { useCount } from '@/compositions/compos.ts'
-import Compos from '@/components/Compos.vue'
 
 const localVue = createLocalVue()
-localVue.use(VueCompositionApi)
+localVue.use(VueCompositionAPI)
 
 describe('Compos.ts', () => {
   test('カウントの値が正しくセットできるか', () => {
@@ -23,12 +22,5 @@ describe('Compos.ts', () => {
     const { countValue, decrement } = useCount()
     decrement()
     expect(countValue.value).toEqual(-1)
-  })
-})
-
-// TODO:
-describe('composition api周り', () => {
-  test('setup関数呼び出し', () => {
-    expect(Compos.setup()).toBeTruthy()
   })
 })

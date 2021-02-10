@@ -3,7 +3,7 @@ import { createLocalVue, mount } from '@vue/test-utils'
 import Toggle from '@/components/jestDemo/Toggle.vue'
 
 // class, idで要素を探すのではなく、data-testid属性でハンドリング
-const sel = (id) => `[data-testid="${id}"]`
+const sel = (id: string) => `[data-testid="${id}"]`
 
 const factory = (values = {}) => {
   const localVue = createLocalVue()
