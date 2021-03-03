@@ -2,27 +2,28 @@ version: 2.1
 jobs:
   lint:
     docker:
-      - image: circleci/node:7.10
+      - image: circleci/node:10.15.3
     steps:
       - checkout
+      - run: npm install
       - run: npm run lint
-  build:
-    docker:
-      - image: circleci/node:7.10
-    steps:
-      - checkout
-      - run: npm run build
-  test:
-    docker:
-      - image: circleci/node:7.10
-    steps:
-      - checkout
-      - run: npm run test
+  # build:
+  #   docker:
+  #     - image: circleci/node:7.10
+  #   steps:
+  #     - checkout
+  #     - run: npm run build
+  # test:
+  #   docker:
+  #     - image: circleci/node:7.10
+  #   steps:
+  #     - checkout
+  #     - run: npm run test
 
 workflows:
   version: 2
   build_and_test:
     jobs:
       - lint
-      - build
-      - test
+      # - build
+      # - test
