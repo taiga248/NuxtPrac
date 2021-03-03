@@ -2,19 +2,20 @@ version: 2.1
 executors:
   frontend-executor:
     docker:
-      - image: circleci/:
+      - image: circleci/node:10.15.3
+
 references:
   cache_key: &cache_key v1-dependencies-{{ checksum "package-lock.json" }}
   save_node_modules: &save_node_modules
     save_cache:
-    paths:
-      - node_modules
-    key: *cache_key
+      paths:
+        - node_modules
+      key: *cache_key
   restore_node_modules: &restore_node_modules
-  restore_cache:
-    keys:
-      - *cache_key
-      - v1-dependencies-
+    restore_cache:
+      keys:
+        - *cache_key
+        - v1-dependencies-
 
 workflows:
   version: 2
@@ -22,11 +23,11 @@ workflows:
     jobs:
       - package-install-and-lint
       - build:
-        requires:
-          - package-install-and-lint
+          requires:
+            - package-install-and-lint
       # - test:
-      #   requires:
-      #     - package-install-and-lint
+      #     requires:
+      #       - package-install-and-lint
 
 jobs:
   package-install-and-lint:
