@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1615196630866" clover="3.2.0">
+  <project timestamp="1615196630866" name="All files">
+    <metrics statements="18" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="7" elements="26" coveredelements="22" complexity="0" loc="18" ncloc="18" packages="4" files="9" classes="9"/>
+    <package name="components">
+      <metrics statements="4" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="Compos.vue" path="/Users/student/energy/study/NuxtPrac/components/Compos.vue">
+        <metrics statements="4" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.jestDemo">
+      <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="7"/>
+      <file name="Equal.vue" path="/Users/student/energy/study/NuxtPrac/components/jestDemo/Equal.vue">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="12" count="2" type="stmt"/>
+      </file>
+      <file name="Input.vue" path="/Users/student/energy/study/NuxtPrac/components/jestDemo/Input.vue">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="25" count="3" type="stmt"/>
+      </file>
+      <file name="Parent.vue" path="/Users/student/energy/study/NuxtPrac/components/jestDemo/Parent.vue">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+      </file>
+      <file name="Toggle.vue" path="/Users/student/energy/study/NuxtPrac/components/jestDemo/Toggle.vue">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.molecules">
+      <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="Nav.vue" path="/Users/student/energy/study/NuxtPrac/components/molecules/Nav.vue">
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="10" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="pages">
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="compositions.vue" path="/Users/student/energy/study/NuxtPrac/pages/compositions.vue">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="13" count="1" type="stmt"/>
+      </file>
+      <file name="hoge.vue" path="/Users/student/energy/study/NuxtPrac/pages/hoge.vue">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+      </file>
+      <file name="index.vue" path="/Users/student/energy/study/NuxtPrac/pages/index.vue">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
