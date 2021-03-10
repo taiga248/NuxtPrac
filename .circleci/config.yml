@@ -57,11 +57,11 @@ jobs:
         - *save_node_modules
         - run: npm run test:ci
         - store_test_results:
-          path: reports
+            path: reports
         - store_artifacts:
-          path: reports        
+            path: reports        
         - store_artifacts:
-          path: coverage
+            path: coverage
   echo:
     executor: frontend-executor
     steps:
