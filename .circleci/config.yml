@@ -31,7 +31,6 @@ workflows:
       - echo:
           requires:
             - package-install-and-lint
-            - test
 
 
 jobs:
