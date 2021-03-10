@@ -10,6 +10,7 @@
     "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lint": "npm run lint:js",
     "test": "jest",
+    "test:ci": "jest -i --ci --runInBand",
     "echo": "echo Hello World"
   },
   "dependencies": {
@@ -36,6 +37,7 @@
     "eslint-plugin-nuxt": "^1.0.0",
     "eslint-plugin-prettier": "^3.1.4",
     "jest": "^26.5.0",
+    "jest-junit": "^12.0.0",
     "prettier": "^2.1.2",
     "ts-jest": "^26.4.1",
     "vue-jest": "^3.0.4"
