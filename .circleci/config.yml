@@ -55,9 +55,13 @@ jobs:
         - checkout
         - *restore_node_modules
         - *save_node_modules
-        - run: npm run test
-        # - store_artifacts:
-        #   path: coverage
+        - run: npm run test:ci
+        - store_test_results:
+            path: reports
+        - store_artifacts:
+            path: reports        
+        - store_artifacts:
+            path: coverage
   echo:
     executor: frontend-executor
     steps:

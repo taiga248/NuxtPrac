@@ -16,6 +16,21 @@ module.exports = {
     '<rootDir>/components/**/*.vue',
     '<rootDir>/pages/**/*.vue',
   ],
+  coverageDirectory: 'coverage',
   // Vuetifyの要素をパースできるように
   setupFiles: ['./test/unit/setup.js'],
+  reporters: [
+    'default',
+    [
+      'jest-junit',
+      {
+        suiteName: 'jest tests',
+        outputDirectory: 'reports/jest',
+        outputName: 'js-test-results.xml',
+        classNameTemplate: '{classname}-{title}',
+        titleTemplate: '{classname}-{title}',
+        ancestorSeparator: ' › ',
+      },
+    ],
+  ],
 }
