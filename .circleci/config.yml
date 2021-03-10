@@ -52,5 +52,5 @@ jobs:
         - *restore_node_modules
         - *save_node_modules
         - run: npm run test
-        - store_artifacts:
-          path: coverage
+        # - store_artifacts:
+        #   path: coverage
