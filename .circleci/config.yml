@@ -28,6 +28,11 @@ workflows:
       - test:
           requires:
             - package-install-and-lint
+      - echo:
+          requires:
+            - package-install-and-lint
+            - test
+
 
 jobs:
   package-install-and-lint:
@@ -54,3 +59,8 @@ jobs:
         - run: npm run test
         # - store_artifacts:
         #   path: coverage
+  echo:
+    executor: frontend-executor
+    steps:
+        - checkout
+        - run: npm run echo
