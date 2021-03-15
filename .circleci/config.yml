@@ -5,14 +5,14 @@ executors:
       - image: circleci/node:10.15.3
 
 workflows:
-        version: 2
-        all-check:
-          jobs:
-            - echo:
-                filters:
-                  branches:
-                    only:
-                      - develop
+  version: 2
+  all-check:
+    jobs:
+      - echo:
+          # filters:
+          #   branches:
+          #     only:
+          #       - develop
 
 jobs:
   echo:
