@@ -8,15 +8,15 @@ workflows:
   version: 2
   all-check:
     jobs:
-      - echo:
+      - echo-hello:
           # filters:
           #   branches:
           #     only:
           #       - develop
 
 jobs:
-  echo:
+  echo-hello:
     executor: frontend-executor
     steps:
       - checkout
-      - run: echo "Hello develop"
+      - run: npm run echo
