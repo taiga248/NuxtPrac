@@ -2,7 +2,7 @@ version: 2.1
 executors:
   frontend-executor:
     docker:
-      - image: circleci/node:10.15.3
+      - image: circleci/node:12.18.4
 
 references:
   cache_key: &cache_key v1-dependencies-{{ checksum "package-lock.json" }}
@@ -28,9 +28,6 @@ workflows:
       - test:
           requires:
             - package-install-and-lint
-      # - echo:
-      #     requires:
-      #       - package-install-and-lint
 
 
 jobs:
@@ -60,9 +57,3 @@ jobs:
             path: reports
         - store_artifacts:
             path: coverage
-
-  # echo:
-  #   executor: frontend-executor
-  #   steps:
-  #       - checkout
-  #       - run: npm run echo
