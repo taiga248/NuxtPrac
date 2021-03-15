@@ -9,10 +9,7 @@ workflows:
   all-check:
     jobs:
       - echo-hello:
-          # filters:
-          #   branches:
-          #     only:
-          #       - develop
+      - echo-hello:
 
 jobs:
   echo-hello:
