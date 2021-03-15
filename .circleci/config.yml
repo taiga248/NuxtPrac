@@ -2,19 +2,19 @@ version: 2.1
 executors:
   frontend-executor:
     docker:
-      - image: circleci/node:12.0
+      - image: circleci/node:10.15.3
 
   workflows:
     all-check:
       jobs:
-        - echo-name:
+        - echo:
             filters:
               branches:
                 only:
                   - develop
 
 jobs:
-  echo-name:
+  echo:
     executor: frontend-executor
     steps:
       - checkout
