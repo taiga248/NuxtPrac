@@ -4,64 +4,19 @@ executors:
     docker:
       - image: circleci/node:10.15.3
 
-references:
-  cache_key: &cache_key v1-dependencies-{{ checksum "package-lock.json" }}
-  save_node_modules: &save_node_modules
-    save_cache:
-      paths:
-        - node_modules
-      key: *cache_key
-  restore_node_modules: &restore_node_modules
-    restore_cache:
-      keys:
-        - *cache_key
-        - v1-dependencies-
-
 workflows:
-  version: 2
-  all-check:
-    jobs:
-      - package-install-and-lint
-      - build:
-          requires:
-            - package-install-and-lint
-      - test:
-          requires:
-            - package-install-and-lint
-      # - echo:
-      #     requires:
-      #       - package-install-and-lint
-
+        version: 2
+        all-check:
+          jobs:
+            - echo:
+                filters:
+                  branches:
+                    only:
+                      - develop
 
 jobs:
-  package-install-and-lint:
+  echo:
     executor: frontend-executor
     steps:
-        - checkout
-        - *restore_node_modules
-        - run: npm install
-        - *save_node_modules
-        - run: npm run lint
-  build:
-    executor: frontend-executor
-    steps:
-        - checkout
-        - *restore_node_modules
-        - *save_node_modules
-        - run: npm run build
-  test:
-    executor: frontend-executor
-    steps:
-        - checkout
-        - *restore_node_modules
-        - *save_node_modules
-        - run: npm run test:ci
-        - store_test_results:
-            path: reports
-        - store_artifacts:
-            path: coverage
-  # echo:
-  #   executor: frontend-executor
-  #   steps:
-  #       - checkout
-  #       - run: npm run echo
+      - checkout
+      - run: echo "Hello develop"
