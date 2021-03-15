@@ -17,15 +17,14 @@ executors:
 #         - *cache_key
 #         - v1-dependencies-
 
-workflows:
-  version: 2
-  all-check:
-    jobs:
-      - package-install-and-lint
-        filters:
-          branches:
-            only:
-              - develop
+  workflows:
+    all-check:
+      jobs:
+        - package-install-and-lint:
+            filters:
+              branches:
+                only:
+                  - master
       # - build:
       #     requires:
       #       - package-install-and-lint
@@ -46,9 +45,9 @@ jobs:
     executor: frontend-executor
     steps:
       - checkout
-      - *restore_node_modules
+      # - *restore_node_modules
       - run: npm install
-      - *save_node_modules
+      # - *save_node_modules
       - run: npm run lint
   # build:
   #   executor: frontend-executor
