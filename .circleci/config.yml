@@ -4,14 +4,15 @@ executors:
     docker:
       - image: circleci/node:10.15.3
 
-  workflows:
-    all-check:
-      jobs:
-        - echo:
-            filters:
-              branches:
-                only:
-                  - develop
+workflows:
+        version: 2
+        all-check:
+          jobs:
+            - echo:
+                filters:
+                  branches:
+                    only:
+                      - develop
 
 jobs:
   echo:
