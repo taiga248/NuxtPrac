@@ -52,7 +52,7 @@ jobs:
 workflows:
   all-check:
     jobs:
-      - package-install-and-lint
+      - package-install-and-lint:
           filters:
             branches:
               only:
