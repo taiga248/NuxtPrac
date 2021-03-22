@@ -53,6 +53,10 @@ workflows:
   all-check:
     jobs:
       - package-install-and-lint
+          filters:
+            branches:
+              only:
+                - develop
       - build:
           requires:
             - package-install-and-lint
