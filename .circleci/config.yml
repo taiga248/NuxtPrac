@@ -17,14 +17,42 @@ references:
         - *cache_key
         - v1-dependencies-
 
-  workflows:
-    all-check:
-      jobs:
-        - package-install-and-lint:
-            filters:
-              branches:
-                only:
-                  - develop
+jobs:
+  package-install-and-lint:
+    executor: frontend-executor
+    steps:
+      - checkout
+      - *restore_node_modules
+      - run:
+          command: npm install
+      - *save_node_modules
+      - run:
+          command: npm run lint
+  build:
+    executor: frontend-executor
+    steps:
+      - checkout
+      - *restore_node_modules
+      - *save_node_modules
+      - run:
+          command: npm run build
+  test:
+    executor: frontend-executor
+    steps:
+      - checkout
+      - *restore_node_modules
+      - *save_node_modules
+      - run:
+          command: npm run test:ci
+          store_test_results:
+            path: coverage
+          store_artifacts:
+            path: coverage
+
+workflows:
+  all-check:
+    jobs:
+      - package-install-and-lint
       - build:
           requires:
             - package-install-and-lint
@@ -39,31 +67,3 @@ references:
             branches:
               only:
                 - develop
-
-jobs:
-  package-install-and-lint:
-    executor: frontend-executor
-    steps:
-      - checkout
-      - *restore_node_modules
-      - run: npm install
-      - *save_node_modules
-      - run: npm run lint
-   build:
-     executor: frontend-executor
-     steps:
-       - checkout
-       - *restore_node_modules
-       - *save_node_modules
-       - run: npm run build
-   test:
-     executor: frontend-executor
-     steps:
-       - checkout
-       - *restore_node_modules
-       - *save_node_modules
-       - run: npm run test:ci
-       - store_test_results:
-           path: reports
-       - store_artifacts:
-           path: coverage
